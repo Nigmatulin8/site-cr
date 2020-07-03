@@ -1,0 +1,433 @@
+@import "fonts";
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* Roof project */
+$mainFontSize: 14px;
+$menuFont: "Roboto";
+
+body {
+  margin: 0;
+  padding: 0;
+  a { text-decoration: none; }
+}
+
+.container {
+	width: 1926px;
+	margin: 0 auto;
+}
+
+.header	{ 
+	@include size(100%, 837px); 
+	background: url("/assets/img/background.png") no-repeat;
+}
+
+.header__head {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0px;
+}
+
+.header__icon { margin: 0 56px 0 173px; }
+
+.navigation__menu {
+	display: flex;
+	margin-right: 490px;
+	cursor: pointer;
+
+	&__item {
+		@include size(107px, 84px);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		font: 17px Roboto;
+		line-height: 20px;
+		color: #333333;
+		
+		border-top: 10px solid rgba(0, 0, 0, 0);
+	}
+
+	&__item:hover {
+		border-top: 10px solid #A1BA43;
+		color: #AAC932;
+	}
+}
+
+.search__button {
+	@include size(15px);
+
+	background: none;
+	border: none;
+	outline: none;
+	
+	margin-right: 15px;
+
+	cursor: pointer;
+}
+
+.callback {
+	@include size(175px, 34px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 15px;
+
+	border: 1px solid #89AB42;
+	box-sizing: border-box;
+	border-radius: 39px;
+	cursor: pointer;
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		@include size(34px);
+	
+		background: #89AB42;
+
+		border-radius: 50%;
+		margin-left: -9px;
+
+		z-index: 1000;
+	}
+
+	&__number {
+		font-family: Roboto;
+		font-weight: 300;
+		font-size: 17px;
+		line-height: 20px;
+		color: #89AB42;
+		padding: 8px 11px 6px 8px;
+	}
+
+	&__hover {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+	
+		opacity: 0;
+
+		background: #89AB42;
+		font-family: Roboto;
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 18px;
+		
+		color: #FFFFFF;
+	}
+
+	&__hover:hover {
+		@include size(161px, 34px);
+		opacity: 1;
+		border-radius: 39px;
+		margin-left: 6px;
+	}
+}
+
+.basket__empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include size(44px, 34px);
+
+	background: #89AB42;
+	border-radius: 39px;
+}
+
+.basket__full {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	@include size(133px, 34px);
+
+	background: #89AB42;
+	border-radius: 39px;
+
+	&__cost {
+		@include size(60px, 18px);
+
+		margin-right: 10px;
+
+		font-family: Roboto;
+		font-size: 15px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+}
+
+.search__active {
+	display: flex;
+	align-items: center;
+			
+	@include size(1057px, 34px);
+
+	border: 1px solid #89AB42;
+	border-radius: 39px;
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		@include size(35px, 34px);
+
+		background: #89AB42;
+		border-radius: 39px;
+	}
+
+	&__input {
+		border: none;
+		width: 872px;
+		
+		font-size: 19px;
+		outline: none;
+
+		padding-left: 10px; 
+	}
+
+	&__button {
+		@include size(150px, 34px);
+
+		background: #89AB42;
+		border: none;
+		outline: none;
+		border-radius: 39px;
+
+		font-family: Roboto;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: #FFFFFF;
+
+		cursor: pointer;
+	}
+
+	&__close {
+		background: none;
+		border: none;
+		position: absolute;
+
+		z-index: 1000;
+		left: 55.5%;
+		cursor: pointer;
+	}
+}
+
+.header__body {
+	padding: 30px 0 100px 0;
+
+	/* background: url (); */
+}
+
+.roof {
+	width: 410px;
+	margin-bottom: 43px;
+
+	&__header {
+		height: 37px;
+		
+		margin-bottom: 16px;
+
+		font-family: a_FuturaRoundDemi;
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 37px;
+		text-transform: uppercase;
+		color: #333333;
+	}
+
+	&__list {
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				@include size(255px, 23px);
+				margin: 0 0 9px 0;
+
+				font-family: a_FuturaRound;
+				font-size: 19px;
+				line-height: 23px;
+				color: #333333;
+
+				cursor: pointer;
+
+				&:hover { color: #89AB42; }
+			}
+		}
+	}
+
+	.two_column {
+		-moz-column-count: 2; 
+		-webkit-column-count: 2;
+		column-count: 2;
+		margin: 0;
+	}
+
+	&__left { margin-left: 1430px; }
+	&__facade__left { margin-left: 1220px; }
+	&__fence__left { margin-left: 1343px; }
+}
+
+.roof__dots {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	margin: 9px 0 0 -760px;
+}
+
+.facade__dots {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	margin: 12px 0 0 -590px;
+}
+
+.fence__dots {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	margin: 8px -195px;
+}
+
+.products {
+	height: 76px;
+	margin-left: 165px;
+	
+	margin-top: -62px;
+	&__nav {
+		width: 1060px;
+		display: flex;
+		align-items: center;
+		background: #254E2F;
+
+		&__item {
+			font-family: Roboto;
+			font-weight: 500;
+			font-size: 17px;
+			line-height: 20px;
+			color: #89AB42;
+
+			padding: 21px;
+			cursor: pointer;
+
+			&:hover { color: rgba(0, 0, 0, 0); }
+			&-roof:hover { background: #A1BA43 url("/assets/img/roof.png") no-repeat center; }
+			&-facade:hover { background: #A1BA43 url("/assets/img/facade.png") no-repeat center; }
+			&-fence:hover { background: #A1BA43 url("/assets/img/fence.png") no-repeat center; }
+			&-gutter:hover { background: #A1BA43 url("/assets/img/gutter.png") no-repeat center; }
+			&-roofEl:hover { background: #A1BA43 url("/assets/img/roofElements.png") no-repeat center; }
+			&-components:hover { background: #A1BA43 url("/assets/img/components.png") no-repeat center; }
+		}
+
+		&__order {
+			@include size(251px, 40px);
+			border: 1px solid #FFFFFF;
+			box-sizing: border-box;
+			border-radius: 39px;
+
+			background: #254E2F;
+
+			font-family: Roboto;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: #ffffff;
+
+			margin-left: 10px;
+			cursor: pointer;
+
+			&:hover { background: #A1BA43; }
+		}
+	}
+
+	&__carts {
+		display: flex;
+
+
+		&__item {
+			@include size(530px, 768px);
+			box-sizing: border-box;
+			padding-left: 60px;
+
+			.logo {
+				@include size(160px, 60px);
+				margin: 108px 0 15px 0;
+			}	
+			
+			.roof { background: url("/assets/img/green-roof.png") no-repeat left; }
+			.facade { background: url("/assets/img/green-facade.png") no-repeat left; }
+			.fence { background: url("/assets/img/green-fence.png") no-repeat left; }
+
+			.header {
+				@include size(144px, 47px);
+				font-family: a_FuturaRoundDemi;
+				font-weight: 500;
+				font-size: 38px;
+				text-transform: uppercase;
+				color: #89AB42;
+
+				background: none;
+			}
+
+			ul {
+				list-style-type: none;
+				height: 341px;
+				overflow: hidden;
+				padding-left: 0px;
+				margin-top: 53px;
+
+				li { 
+					width: 326px;
+					font-family: a_FuturaRound;
+					font-size: 24px;
+					color: #333333;
+					padding-bottom: 18px;
+
+					a { color: #333333; } 
+				}
+			}
+
+			button {
+				background: none;
+				border: none;
+				outline: none;
+				cursor: pointer;
+			}
+
+			&:hover {
+				background: #89AB42;
+				.roof { background: url("/assets/img/roof.png") no-repeat left; }
+				.facade { background: url("/assets/img/facade.png") no-repeat left; }
+				.fence { background: url("/assets/img/fence.png") no-repeat left; }
+
+				.header { color: #ffffff; }
+				ul { 
+					li { 
+						a { 
+							color: #ffffff; 
+							&:hover { color: #254E2F; }
+						} 
+					} 
+				}
+			}
+		}
+
+		.central_borders {
+			border-left: 2px solid #254E2F;
+			border-right: 2px solid #254E2F;
+		}
+	}
+}
