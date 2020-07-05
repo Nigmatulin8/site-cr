@@ -1,0 +1,349 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+.catalog__header {
+	@include size(100%, 94px); 
+	color: #333333;
+}
+
+.catalog__body {
+	display: flex;
+	padding: 45px  0 0 160px;
+}
+
+.catalog__product {
+	margin-left: 80px;
+	
+	.main__slider {
+		border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+		padding-bottom: 120px;
+	}
+
+	ul {
+		display: flex;
+		margin-bottom: 0;
+
+		li {
+			list-style-type: none;
+			margin-right: 16px; 
+
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 220.8%;
+			color: rgba(51, 51, 51, 0.5);
+		}
+	}
+
+	.slider__wrapper {
+		@include size(100%, 459px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+	
+	.slider__buttons {
+		position: absolute;
+		top: 390px;
+		left: 370px;
+	}
+
+	.slider {
+		width: 551px;
+
+		img { display: none; }
+
+		.block {
+			display: block;
+			object-fit: cover;
+		}
+	}
+
+	.btnRight {
+		@include size(50px);
+
+		background: url('/assets/img/right.png');
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	.btnLeft {
+		@include size(50px);
+
+		background: url('/assets/img/right.png');
+		border: none;
+		outline: none;
+		cursor: pointer;
+		transform: rotate(180deg);
+
+		margin-right: 15px;
+	}
+
+
+	.slide__info {
+		height: 280px;
+		margin-left: 80px;
+		margin-top: -90px;
+		border-bottom: 1px solid #333333;
+
+		&__header {
+			@include size(450px, 62px); 
+			font-family: a_FuturaRoundDemi;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 123%;
+			color: #89AB42;
+		}
+
+		&__body {
+			@include size(163px, 150px); 
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 216.9%;
+			color: #333333;
+
+			margin-top: 15px;
+		}
+
+		&__price {
+			display: flex;
+			margin-top: 60px;
+
+			.order {
+				display: flex;
+				align-items: center;
+
+				&__in {
+					@include size(230px, 28px); 
+					font-family: Roboto;
+					font-style: normal;
+					font-weight: 300;
+					font-size: 13px;
+					line-height: 216.9%;
+					color: #464646;
+					margin-top: -100px;
+
+					button {
+						@include size(212px, 34px); 
+						border: 1px solid #89AB42;
+						box-sizing: border-box;
+						border-radius: 39px;
+						background: none;
+						outline: none;
+						cursor: pointer;
+						margin-top: 10px;
+
+						&:hover {
+							background: #89AB42;
+							color: #ffffff;
+						}
+					}
+				}
+
+				&__price {
+					margin: 15px 0 0 20px;
+					
+					&__inf { display: flex; }			
+
+					&__new {
+						.new {
+							@include size(133px, 23px); 
+							font-family: Roboto;
+							font-style: normal;
+							font-weight: 500;
+							font-size: 22px;
+							line-height: 26px;
+							color: #89AB42;
+						}
+
+						.info {
+							@include size(140px, 30px); 
+							font-family: Roboto;
+							font-style: normal;
+							font-weight: 300;
+							font-size: 14px;
+							line-height: 216.9%;
+							color: #464646;
+						}
+					}
+
+					&__old {
+						@include size(140px, 23px); 
+						font-family: Roboto;
+						font-style: normal;
+						font-weight: 300;
+						font-size: 18px;
+						line-height: 21px;
+						text-decoration-line: line-through;
+						color: #333333;
+					}
+
+					&__add {
+						margin-top: 15px;
+
+						input[type=button] {
+							@include size(27px); 
+							font-family: Roboto;
+							font-style: normal;
+							font-weight: 300;
+							font-size: 24px;
+							line-height: 28px;
+							color: rgba(51, 51, 51, 0.5);
+
+							background: none;
+							border: none;
+							outline: none;
+							cursor: pointer;
+						}
+
+						input[type=text] {
+							@include size(36px, 24px); 
+							font-family: Roboto;
+							font-style: normal;
+							font-weight: 300;
+							font-size: 18px;
+							line-height: 21px;
+							color: #333333;
+							text-align: center;
+
+							background: none;
+							border: none;
+							outline: none
+						}
+
+						input[type=submit] {
+							@include size(172px, 34px); 
+							background: #89AB42;
+							border-radius: 39px;
+							color: #ffffff;
+
+							border: none;
+							outline: none;
+							cursor: pointer;
+
+							margin-left: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.additional__products {
+		padding-top: 40px;
+
+		&__header {
+			@include size(496px, 47px);
+			font-family: a_FuturaRoundDemi;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 38px;
+			line-height: 47px;
+			text-transform: uppercase;
+			color: #89AB42;
+		}
+
+		.additional__products__list {	
+			display: flex;
+			justify-content: space-between;
+
+			.item {
+				width: 358px;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+
+				&__image {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img { @include size(224px, 204px); }
+				}
+
+
+				.descripoion {
+					@include size(350px, 36px);
+					font-family: Roboto;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 15px;
+					line-height: 123%;
+					color: #333333;
+					margin-bottom: 5px;
+				}
+
+				.info {
+					@include size(133px, 72px);
+					font-family: Roboto;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 13px;
+					line-height: 136%;
+					color: #333333;
+				}
+
+				.order {
+					display: flex;
+					justify-content: space-between;
+					margin: 5px 0;
+					padding-top: 5px;
+					border-top: 1px solid #333333;
+
+					&__in {
+						@include size(63px, 12px);
+						font-family: Roboto;
+						font-style: normal;
+						font-weight: 300;
+						font-size: 9px;
+						line-height: 136%;
+						color: #656464;
+					}
+
+					&__price {
+						@include size(133px, 23px);
+						font-family: Roboto;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 20px;
+						line-height: 23px;
+						color: #89AB42;
+
+						padding-top: 5px;
+					}
+
+					&__add {
+						display: flex;
+
+						button {
+							@include size(45px);
+							border: none;
+							outline: none;
+							cursor: pointer;
+						}
+
+						.add__pr {
+							background: url("/assets/img/add_product.png") no-repeat;
+							margin-right: 5px;
+
+							&:hover {
+								background: url("/assets/img/add_product_active.png") no-repeat;
+							}
+						}
+
+						.order__pr {
+							background: url("/assets/img/order_arrow.png") no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+}

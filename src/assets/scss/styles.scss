@@ -1,4 +1,6 @@
 @import "fonts";
+@import "accordion";
+@import "catalog";
 
 @mixin size($width, $height: $width) {
   width: $width;
@@ -23,6 +25,34 @@ body {
 .header	{ 
 	@include size(100%, 837px); 
 	background: url("/assets/img/background.png") no-repeat;
+	color: #333333;
+	transition: 0.5s;
+
+	.item__color { color: #333333; transition: 0.5s}
+}
+
+.header__roof__active {
+	background: url("/assets/img/roof_active.png") no-repeat;
+	color: #ffffff;
+	transition: 0.5s;
+
+	.item__color { color: #ffffff; }
+}
+
+.header__facade__active {
+	background: url("/assets/img/facade_active.png") no-repeat;
+	color: #ffffff;
+	transition: 0.5s;
+
+	.item__color { color: #ffffff; }
+}
+
+.header__fence__active {
+	background: url("/assets/img/fence_active.png") no-repeat;
+	color: #ffffff;
+	transition: 0.5s;
+
+	.item__color { color: #ffffff; }
 }
 
 .header__head {
@@ -47,7 +77,6 @@ body {
 		
 		font: 17px Roboto;
 		line-height: 20px;
-		color: #333333;
 		
 		border-top: 10px solid rgba(0, 0, 0, 0);
 	}
@@ -232,8 +261,8 @@ body {
 
 .roof {
 	width: 410px;
-	margin-bottom: 43px;
-
+	margin: 15px 0 43px 0;
+	
 	&__header {
 		height: 37px;
 		
@@ -244,7 +273,6 @@ body {
 		font-size: 30px;
 		line-height: 37px;
 		text-transform: uppercase;
-		color: #333333;
 	}
 
 	&__list {
@@ -260,7 +288,6 @@ body {
 				font-family: a_FuturaRound;
 				font-size: 19px;
 				line-height: 23px;
-				color: #333333;
 
 				cursor: pointer;
 
@@ -275,11 +302,11 @@ body {
 		column-count: 2;
 		margin: 0;
 	}
-
-	&__left { margin-left: 1430px; }
-	&__facade__left { margin-left: 1220px; }
-	&__fence__left { margin-left: 1343px; }
 }
+
+.roof__left { margin-left: 1480px; }
+.roof__facade__left { margin-left: 1280px; }
+.roof__fence__left { margin: 50px 0 0 1400px; }
 
 .roof__dots {
 	display: flex;
@@ -365,7 +392,7 @@ body {
 				margin: 108px 0 15px 0;
 			}	
 			
-			.roof { background: url("/assets/img/green-roof.png") no-repeat left; }
+			.roof_pr { background: url("/assets/img/green-roof.png") no-repeat left; }
 			.facade { background: url("/assets/img/green-facade.png") no-repeat left; }
 			.fence { background: url("/assets/img/green-fence.png") no-repeat left; }
 
@@ -407,7 +434,7 @@ body {
 
 			&:hover {
 				background: #89AB42;
-				.roof { background: url("/assets/img/roof.png") no-repeat left; }
+				.roof_pr { background: url("/assets/img/roof.png") no-repeat left; }
 				.facade { background: url("/assets/img/facade.png") no-repeat left; }
 				.fence { background: url("/assets/img/fence.png") no-repeat left; }
 
@@ -891,7 +918,7 @@ body {
 #goUP {
 	margin-left: 96.2%; 
 	cursor: pointer;
-	margin-bottom: -3px;
+	margin-bottom: -5px;
 }
 
 footer {
@@ -1054,3 +1081,28 @@ footer {
 		}
 	}
 }
+
+.accordion__title {
+	@include size(123px, 37px); 
+	display: flex;
+	align-items: center;
+	font-family: a_FuturaRoundDemi;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 37px;
+	text-transform: uppercase;
+	color: #89AB42;
+	margin-bottom: 22px;
+
+	img {
+		@include size(33px, 22px); 
+		margin: 0 12px 0 70px;
+	}
+}
+
+
+
+
+
+
